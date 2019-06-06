@@ -1,15 +1,21 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 
+# THIS IS VERY MUCH THE WRONG WAY TO DO THINGS
+# I OUGHT TO COMPILE (AND MAKE A BOTTLE IF I NEED TO)
+# THIS DOWNLOADS AND INSTALLS A BINARY!
+
 class Rum < Formula
   desc "Turing Institute meeting room availability checker"
   homepage "https://github.com/alan-turing-institute/rum"
   url "https://github.com/alan-turing-institute/rum/blob/dist/dist/rum-0.1.0.tar.gz?raw=true"
-  sha256 "9652ea88977dcf8950f244089281be4452c4ed54a13fc9cebb78b2f849360774"
-  revision 3
+  sha256 "9570aaa929bf711a92522c9cbe63c4840185f3c3b1d869177e5169cac9255f78"
+  revision 7
   
   def install
-    bin.install "rum/bin/rum"
+    bin.install "bin/rum"
+    prefix.install Dir["bin"]
+    prefix.install Dir["lib"]
     # ENV.deparallelize  # if your formula fails when building in parallel
     # Remove unrecognized options if warned by configure
     # system "./configure", "--disable-debug",
@@ -17,7 +23,7 @@ class Rum < Formula
     #                      "--disable-silent-rules",
     #                      "--prefix=#{prefix}"
     # system "cmake", ".", *std_cmake_args
-    #system "make", "install" # if this fails, try separate make/make install steps
+    # system "make", "install" # if this fails, try separate make/make install steps
   end
 
   test do
