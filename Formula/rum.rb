@@ -6,7 +6,8 @@ class Rum < Formula
   homepage "https://github.com/alan-turing-institute/rum"
   url "https://github.com/alan-turing-institute/rum/blob/dist/dist/rum-0.1.0.tar.gz?raw=true"
   sha256 "f72199108d02d181a351fd2ad7005d49281b8cfbbacf5d11608502734249ddb0"
-
+  revision 2
+  
   def install
     bin.install "rum/bin/rum"
     # ENV.deparallelize  # if your formula fails when building in parallel
