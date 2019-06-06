@@ -4,8 +4,8 @@
 class Rum < Formula
   desc "Turing Institute meeting room availability checker"
   homepage "https://github.com/alan-turing-institute/rum"
-  url "https://github.com/alan-turing-institute/rum/blob/dist/dist/rum-0.1.0.tar.gz"
-  sha256 "f2eb50fc1504e772eb50fd84770862a4168155fdd7182b50c465deda10886a07"
+  url "https://github.com/alan-turing-institute/rum/blob/dist/dist/rum-0.1.0.tar.gz?raw=true"
+  sha256 "f72199108d02d181a351fd2ad7005d49281b8cfbbacf5d11608502734249ddb0"
 
   def install
     bin.install "rum/bin/rum"
