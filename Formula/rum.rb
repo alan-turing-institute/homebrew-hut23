@@ -12,12 +12,12 @@
 class Rum < Formula
   desc "Turing Institute meeting room availability checker"
   homepage "https://github.com/alan-turing-institute/rum"
-  url "https://github.com/alan-turing-institute/rum/archive/0.2.0.tar.gz"
-  sha256 "e47bf48ad5103c8fa35375a2e7b41e7da1a79db63a6bc67ebd016a04c02f0223"
+  url "https://github.com/alan-turing-institute/rum/archive/0.2.1.tar.gz"
+  sha256 "8a31d012416a873ad685e3c686c28c32e8ae0d41d57559c5ad51eb977d80726d"
 
   bottle do
-    root_url "https://github.com/alan-turing-institute/rum/releases/download/0.2.0"
-    sha256 "b7f0b297e82dae3e8c8f0c9af484e6d2c7d92cad230a9183d383472165cb4ef3" => :mojave
+    root_url "https://github.com/alan-turing-institute/rum/releases/download/0.2.1"
+    sha256 "642f764d52488a8b69faf8694fd659bd0586fc81f35f5e390fb4dd5577dd06b5" => :mojave
   end
    
   depends_on "racket"
