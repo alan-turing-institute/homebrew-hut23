@@ -14,6 +14,7 @@ class Whatwhat < Formula
   depends_on "opam"
 
   def install
+    system "opam", "init"
     system "opam", "install", "dune"
     system "dune", "build"
   end
