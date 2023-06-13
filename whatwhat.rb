@@ -1,4 +1,4 @@
-class Whatwhats < Formula
+class Whatwhat < Formula
   desc "`whatwhat` is an OCaml command-line tool to help monitor project status and allocations in the Research Engineering Group"
   homepage "https://github.com/alan-turing-institute/whatwhat"
   url "https://github.com/alan-turing-institute/whatwhat/archive/refs/tags/v0.0.2.tar.gz"
