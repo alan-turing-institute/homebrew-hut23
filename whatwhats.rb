@@ -17,7 +17,7 @@ class Whatwhats < Formula
     system "opam", "init", "--no-setup", "--disable-sandboxing"
     system "opam", "install", "dune"
     system "opam", "exec", "--", "make", "install-deps"
-    bin.install "_build/default/src/main.exe" => "whatwhat"
+    bin.install "_build/default/bin/main.exe" => "whatwhat"
   end
 
   test do
