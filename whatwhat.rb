@@ -9,8 +9,8 @@ class Whatwhat < Formula
   
   bottle do
     root_url "https://github.com/alan-turing-institute/whatwhat/releases/download/v0.0.5"
-    rebuild 1
-    sha256 cellar: :any, arm64_ventura: "19a5adb1f19ab1aa99fc07125b100c6b637fc822e9248fd382b93caf0d792258"
+    rebuild 2
+    sha256 cellar: :any, arm64_ventura: "7e4420e5d9d5a6123984d651e6e9958282a97aaa9cccda9e809d33d2d7fcdbc6"
   end
   
   def install
