@@ -5,7 +5,7 @@ class Whatwhat < Formula
   license "MIT"
 
   depends_on "opam" => :build
-  depends_on "openssl@3" => :build
+  depends_on "openssl@3"
   
   bottle do
     root_url "https://github.com/alan-turing-institute/whatwhat/releases/download/v0.0.5"
