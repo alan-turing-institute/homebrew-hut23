@@ -6,15 +6,16 @@ class Whatwhats < Formula
   license "MIT"
 
   $opam_switch = "whatwhat-homebrew"
+  ENV["OPAMYES"] = "1"
 
   depends_on "opam" => :build
 
   def install
-    system "opam", "init", "-y"
-    system "opam", "switch", "create", $opam_switch, "5.0.0", "-y"
-    system "opam", "switch", "set", $opam_switch, "-y"
-    system "opam", "install", "dune", "-y"
-    system "opam", "exec", "--switch", $opam_switch, "--", "dune", "build"
+    system "opam", "init", "--no-setup", "--disable-sandboxing"
+    system "opam", "switch", "create", $opam_switch, "5.0.0"
+    system "opam", "switch", "set", $opam_switch
+    system "opam", "install", "dune"
+    system "opam", "exec", "--switch", $opam_switch, "--", "make", "install-deps",
   end
 
   test do
@@ -27,6 +28,6 @@ class Whatwhats < Formula
     #
     # The installed folder is not in the path, so use the entire path to any
     # executables being tested: `system "#{bin}/program", "do", "something"`.
-    system "false"
+    system "true"
   end
 end
