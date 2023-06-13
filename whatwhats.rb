@@ -5,14 +5,14 @@ class Whatwhats < Formula
   sha256 "53d9ad7669641c6964034a46647e297cd740b31ac8bbcd5acab7745455cd3385"
   license "MIT"
 
-  opamroot = buildpath/".opam"
-  ENV["OPAMROOT"] = opamroot
-  ENV["OPAMYES"] = "1"
-
   depends_on "openssl@3" => :build
   depends_on "opam" => :build
 
   def install
+    opamroot = buildpath/".opam"
+    ENV["OPAMROOT"] = opamroot
+    ENV["OPAMYES"] = "1"
+
     ENV.deparallelize
     system "opam", "init", "--no-setup", "--disable-sandboxing"
     system "opam", "install", "dune"
