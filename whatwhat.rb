@@ -1,8 +1,8 @@
 class Whatwhats < Formula
   desc "`whatwhat` is an OCaml command-line tool to help monitor project status and allocations in the Research Engineering Group"
   homepage "https://github.com/alan-turing-institute/whatwhat"
-  url "https://github.com/alan-turing-institute/whatwhat/archive/refs/tags/v0.0.1.tar.gz"
-  sha256 "53d9ad7669641c6964034a46647e297cd740b31ac8bbcd5acab7745455cd3385"
+  url "https://github.com/alan-turing-institute/whatwhat/archive/refs/tags/v0.0.2.tar.gz"
+  sha256 "c3b987bf85f277660563d3174cf3a331c081aa104205ee1903e688d5ebd16a60"
   license "MIT"
 
   depends_on "openssl@3" => :build
