@@ -1,11 +1,11 @@
 class Whatwhat < Formula
-  desc "`whatwhat` is an OCaml command-line tool to help monitor project status and allocations in the Research Engineering Group"
+  desc "`whatwhat` is a command-line tool to report project allocations"
   homepage "https://github.com/alan-turing-institute/whatwhat"
   url "https://github.com/alan-turing-institute/whatwhat.git", tag: "v0.0.3", revision: "862dacba6e5c366404aa1a5e508424e7226ae619"
   license "MIT"
 
-  depends_on "openssl@3" => :build
   depends_on "opam" => :build
+  depends_on "openssl@3" => :build
 
   def install
     opamroot = buildpath/".opam"
