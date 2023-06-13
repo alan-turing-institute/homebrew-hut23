@@ -6,7 +6,13 @@ class Whatwhat < Formula
 
   depends_on "opam" => :build
   depends_on "openssl@3" => :build
-
+  
+  bottle do
+    root_url "https://github.com/alan-turing-institute/whatwhat/releases/download/v0.0.5"
+    rebuild 1
+    sha256 cellar: :any, arm64_ventura: "19a5adb1f19ab1aa99fc07125b100c6b637fc822e9248fd382b93caf0d792258"
+  end
+  
   def install
     opamroot = buildpath/".opam"
     ENV["OPAMROOT"] = opamroot
