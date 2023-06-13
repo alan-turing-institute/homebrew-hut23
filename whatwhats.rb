@@ -5,17 +5,18 @@ class Whatwhats < Formula
   sha256 "53d9ad7669641c6964034a46647e297cd740b31ac8bbcd5acab7745455cd3385"
   license "MIT"
 
-  $opam_switch = "whatwhat-homebrew"
+  opamroot = buildpath/".opam"
+  ENV["OPAMROOT"] = opamroot
   ENV["OPAMYES"] = "1"
 
+  depends_on "openssl@3" => :build
   depends_on "opam" => :build
 
   def install
+    ENV.deparallelize
     system "opam", "init", "--no-setup", "--disable-sandboxing"
-    system "opam", "switch", "create", $opam_switch, "5.0.0"
-    system "opam", "switch", "set", $opam_switch
     system "opam", "install", "dune"
-    system "opam", "exec", "--switch", $opam_switch, "--", "make", "install-deps"
+    system "opam", "exec", "--", "make", "install-deps"
   end
 
   test do
