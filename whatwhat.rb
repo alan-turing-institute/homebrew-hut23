@@ -11,7 +11,7 @@ class Whatwhat < Formula
   # depends_on "cmake" => :build
   # depends_on "ocaml-findlib" => :build
   # depends_on "ocaml"
-  depends_on "opam" :build
+  depends_on "opam" => :build
 
   def install
     system "opam", "init", "-y"
