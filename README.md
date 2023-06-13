@@ -9,3 +9,13 @@ Usage:
 
     brew tap alan-turing-institute/hut23
 
+## For developers
+
+    brew install --build-bottle --verbose whatwhat
+    brew bottle whatwhat
+    
+Then
+
+    gh release upload <tag> <bottle.tar.gz>
+    
+    
