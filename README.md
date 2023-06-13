@@ -14,8 +14,9 @@ Usage:
     brew install --build-bottle --verbose whatwhat
     brew bottle whatwhat
     
-Then
+Then edit the filename so there is a single dash after the project
+name, not two. Then:
 
     gh release upload <tag> <bottle.tar.gz>
     
-    
+from the whatwhat repo.
