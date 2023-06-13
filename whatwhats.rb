@@ -15,7 +15,7 @@ class Whatwhats < Formula
     system "opam", "switch", "create", $opam_switch, "5.0.0"
     system "opam", "switch", "set", $opam_switch
     system "opam", "install", "dune"
-    system "opam", "exec", "--switch", $opam_switch, "--", "make", "install-deps",
+    system "opam", "exec", "--switch", $opam_switch, "--", "make", "install-deps"
   end
 
   test do
