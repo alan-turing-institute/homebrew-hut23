@@ -1,7 +1,7 @@
 class Whatwhat < Formula
   desc "`whatwhat` is a command-line tool to report project allocations"
   homepage "https://github.com/alan-turing-institute/whatwhat"
-  url "https://github.com/alan-turing-institute/whatwhat.git", tag: "v0.0.13", revision: "27413d81bd03e2abe14556aa9aa7557deec0e4b8"
+  url "https://github.com/alan-turing-institute/whatwhat.git", tag: "v0.0.15", revision: "7440e12fcc29db2d9df6be9f4457e51c2b0bb29a"
   license "MIT"
 
   depends_on "opam" => :build
