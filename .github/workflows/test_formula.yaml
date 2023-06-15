@@ -1,0 +1,40 @@
+# This workflow tests the Homebrew installation of whatwhat
+# when the whatwhat.rb file is updated.
+name: Test Homebrew installation of whatwhat
+on:
+    push:
+        branches:
+            - master
+        paths:
+            - "whatwhat.rb"
+    pull_request:
+        branches:
+            - master
+        paths:
+            - "whatwhat.rb"
+
+jobs:
+    test:
+        runs-on: macos-13
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            - name: Update Homebrew
+              run: brew update
+            
+            - name: Tap alan-turing-institute/hut23
+              run: brew tap alan-turing-institute/hut23
+
+            - name: Install whatwhat
+              run: brew install --build-from-source whatwhat
+            
+            - name: Verify Output
+              run: |
+                output=$(whatwhat --help)
+                if [[ $output == *"Whatwhat Manual"* ]]; then
+                  echo "Output contains 'Whatwhat Manual'"
+                else
+                  echo "Output does not contain 'Whatwhat Manual'"
+                  exit 1
+                fi
