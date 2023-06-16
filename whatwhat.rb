@@ -22,6 +22,7 @@ class Whatwhat < Formula
     system "opam", "init", "--no-setup", "--disable-sandboxing"
     system "opam", "install", "dune"
     system "opam", "exec", "--", "make", "install-deps"
+    system "mkdir", "-p", "#{ENV["HOME"]}/.config/whatwhat"
     bin.install "_build/default/bin/main.exe" => "whatwhat"
   end
 
