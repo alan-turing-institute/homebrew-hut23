@@ -7,7 +7,7 @@ class Whatwhat < Formula
   depends_on "opam" => :build
   depends_on "openssl@3"
   
-  # specify pre-compiled bottle for faster installation
+  # specify precompiled bottle for faster installation
   bottle do
     root_url "https://github.com/alan-turing-institute/whatwhat/releases/download/v0.0.19"
     rebuild 4
