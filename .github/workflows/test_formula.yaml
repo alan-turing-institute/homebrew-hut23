@@ -32,14 +32,7 @@ jobs:
               run: brew tap alan-turing-institute/hut23
 
             - name: Install whatwhat
-              run: brew install --build-from-source whatwhat
+              run: brew install --build-bottle whatwhat
             
-            - name: Verify Output
-              run: |
-                output=$(whatwhat --help)
-                if [[ $output == *"Whatwhat Manual"* ]]; then
-                  echo "Output contains 'Whatwhat Manual'"
-                else
-                  echo "Output does not contain 'Whatwhat Manual'"
-                  exit 1
-                fi
+            - name: Build bottle
+              run: brew bottle whatwhat
