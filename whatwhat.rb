@@ -7,12 +7,8 @@ class Whatwhat < Formula
   depends_on "opam" => :build
   depends_on "openssl@3"
   
-  # specify precompiled bottle for faster installation
   bottle do
-    root_url "https://github.com/alan-turing-institute/whatwhat/releases/download/v0.0.19"
-    rebuild 4
-    sha256 cellar: :any, arm64_ventura: "c458c07d0e9790b0a42f2bf548b80193b7fdd1434fd895a7202ccd829012280d"
-    sha256 cellar: :any, ventura: "1b6f67a2e98a7e4d325fe101bdaaf44f4b32f4f7b5dda395a9f2b1325ed8883e"
+    sha256 cellar: :any, arm64_ventura: "3059c3bc6c4c07ce94066253c02b7e294e0bbd41aed045395f6e8db9936f6184"
   end
   
   def install
