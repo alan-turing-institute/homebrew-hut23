@@ -11,8 +11,6 @@ class Whatwhat < Formula
     root_url "https://github.com/alan-turing-institute/whatwhat/releases/download/v0.0.26"
     sha256 cellar: :any, arm64_ventura: "2469acebd9e6a965e785cbdb3758ef6f64d835f18be5b46213fe1fcfad8989aa"
   end
-
-  end
   
   def install
     opamroot = buildpath/".opam"
