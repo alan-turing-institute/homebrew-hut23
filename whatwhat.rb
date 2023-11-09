@@ -7,10 +7,14 @@ class Whatwhat < Formula
   depends_on "opam" => :build
   depends_on "openssl@3"
   
+==> Bottling whatwhat--0.0.26.arm64_ventura.bottle.tar.gz...
+    root_url "https://github.com/alan-turing-institute/whatwhat/releases/download/v0.0.26"
+==> Detecting if whatwhat--0.0.26.arm64_ventura.bottle.tar.gz is relocatable...
+./whatwhat--0.0.26.arm64_ventura.bottle.tar.gz
   bottle do
-    root_url "https://github.com/alan-turing-institute/whatwhat/releases/download/v0.0.20"
-    sha256 cellar: :any, arm64_ventura: "3059c3bc6c4c07ce94066253c02b7e294e0bbd41aed045395f6e8db9936f6184"
-    sha256 cellar: :any, sonoma: "aaaaf7edf2cd10d1ba4746de0741efb924351430693459132a77925fed8c9aee"
+    sha256 cellar: :any, arm64_ventura: "2469acebd9e6a965e785cbdb3758ef6f64d835f18be5b46213fe1fcfad8989aa"
+  end
+
   end
   
   def install
