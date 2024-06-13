@@ -5,7 +5,7 @@ class Meet < Formula
   license "MIT"
 
   depends_on "cabal-install" => :build
-  depends_on "ghc@9.8" => :build
+  depends_on "ghc@9.4" => :build
 
   # bottle do
   #   root_url "https://github.com/alan-turing-institute/whatwhat/releases/download/v0.0.29"
