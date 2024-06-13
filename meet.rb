@@ -7,10 +7,10 @@ class Meet < Formula
   depends_on "cabal-install" => :build
   depends_on "ghc@9.4" => :build
 
-  # bottle do
-  #   root_url "https://github.com/alan-turing-institute/whatwhat/releases/download/v0.0.29"
-  #   sha256 cellar: :any, arm64_ventura: "a2e296b6a14b25de9fa7085010145a18f40bc91558b813a2eb2a68169b654fec"
-  # end
+  bottle do
+    root_url "https://github.com/alan-turing-institute/meet/releases/download/v0.1.0.3"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "c3df1b2184fcc71453ebce39cda0bd7256514ca335aa85faca4205f06fb1011d"
+  end
 
   def install
     system "cabal", "update"
