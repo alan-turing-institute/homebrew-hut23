@@ -1,7 +1,7 @@
 class Meet < Formula
   desc "Command-line tool to find meeting times"
   homepage "https://github.com/alan-turing-institute/meet"
-  url "https://github.com/alan-turing-institute/meet.git", tag: "v0.2.0.1", revision: "33a9dfd38031012f2cc328f015f0505261e628c9"
+  url "https://github.com/alan-turing-institute/meet.git", tag: "v0.2.0.2", revision: "e93b111d46b4e6fcaf11a969506b11fd6248e3ab"
   license "MIT"
 
   depends_on "cabal-install" => :build
