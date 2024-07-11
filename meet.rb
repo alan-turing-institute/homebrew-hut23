@@ -9,8 +9,8 @@ class Meet < Formula
 
   bottle do
     root_url "https://github.com/alan-turing-institute/meet/releases/download/v0.2.0.2"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "5b8f4008e0baeed4f30a660eea83d1b4809a4e707dd9aca593d8c78c99f15324"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5b8f4008e0baeed4f30a660eea83d1b4809a4e707dd9aca593d8c78c99f15324"
+    # sha256 cellar: :any_skip_relocation, arm64_ventura: "5b8f4008e0baeed4f30a660eea83d1b4809a4e707dd9aca593d8c78c99f15324"
+    # sha256 cellar: :any_skip_relocation, arm64_monterey: "5b8f4008e0baeed4f30a660eea83d1b4809a4e707dd9aca593d8c78c99f15324"
   end
 
   def install
