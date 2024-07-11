@@ -8,7 +8,7 @@ class Meet < Formula
   depends_on "ghc@9.4" => :build
 
   bottle do
-    root_url "https://github.com/alan-turing-institute/meet/releases/download/v0.2.0.2"
+    root_url "https://github.com/alan-turing-institute/meet/releases/download/v0.2.0.3"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "d18959344831b2e9edf63d9b05ac371ec54fa0fb97a93c753d1f7f2dbb777f19"
     sha256 cellar: :any_skip_relocation, arm64_ventura: "d18959344831b2e9edf63d9b05ac371ec54fa0fb97a93c753d1f7f2dbb777f19"
   end
