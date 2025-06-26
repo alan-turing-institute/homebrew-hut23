@@ -8,9 +8,10 @@ class Whatwhat < Formula
   depends_on "openssl@3"
 
   bottle do
-    root_url "https://github.com/alan-turing-institute/whatwhat/releases/download/v0.0.31"
-    sha256 cellar: :any, arm64_sequoia: "eeee95ac8cfb71fd6e509c4241fc328500dc5d6989de0116b639c67eab8c86e7"
+    root_url "https://github.com/alan-turing-institute/whatwhat/releases/download/v0.0.32"
+    sha256 cellar: :any, arm64_sequoia: "8ac810c4966d58ce24a59f50ba0bf3680fd05b33aca79e13902b2b1e0adebfd2"
   end
+
 
 
 
